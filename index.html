@@ -3,20 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List con Drag & Drop | MasioTech&DigSol</title>
+    <title>To-Do List con Tema Oscuro | TuNombre</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="style.css">
-        <!-- Otros meta tags -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
     <div class="container">
         <h1>Mis Tareas ✏️</h1>
+        
+        <!-- Toggle de Tema -->
+        <div class="theme-toggle-container">
+            <label class="theme-toggle">
+                <input type="checkbox" id="themeToggle">
+                <span class="slider round"></span>
+            </label>
+            <span id="themeLabel">🌙 Modo Oscuro</span>
+        </div>
+
+        <!-- Input para añadir tareas -->
         <div class="input-container">
             <input type="text" id="taskInput" placeholder="Añade una tarea...">
             <button id="addTaskBtn">➕</button>
         </div>
+
+        <!-- Contador -->
+        <p id="counter" class="counter">0 tareas pendientes</p>
+
+        <!-- Lista de tareas -->
         <ul id="taskList"></ul>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>
